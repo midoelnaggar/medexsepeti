@@ -18,8 +18,8 @@ type homeProps = {
 };
 
 export const getServerSideProps = async () => {
-  const menu = await axios.get("http://localhost:3000/api/menu");
-  const home = await axios.get("http://localhost:3000/api/home");
+  const menu = await axios.get(process.env.NEXT_PUBLIC_API_URL + "api/menu");
+  const home = await axios.get(process.env.NEXT_PUBLIC_API_URL + "api/home");
   return {
     props: {
       menu: menu.data,

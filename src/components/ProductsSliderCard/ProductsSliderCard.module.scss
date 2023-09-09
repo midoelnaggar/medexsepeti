@@ -1,3 +1,61 @@
-.ProductsSliderCard {
 
-}
+.ProductsSliderCard {
+    width: 180px;
+    margin-block: 24px;
+    display: flex;
+    flex-direction: column;
+    .imageContainer {
+      position: relative;
+      .tag {
+        position: absolute;
+        padding: 26px;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        span {
+          padding: 9px 16px;
+          font-size: 15px;
+          font-weight: 500;
+          color: white;
+          background-color: var(--c1);
+          height: fit-content;
+          text-transform: uppercase;
+        }
+        button {
+          cursor: pointer;
+        }
+      }
+  
+      img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+
+    }
+    .details {
+      margin-block: 28px;
+      .title {
+        font-size: 18px;
+        text-transform: capitalize;
+        color: var(--c5);
+      }
+      .descAndPrice {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 5px;
+        * {
+          display: flex;
+          align-items: center;
+        }
+        .price {
+          font-size: 22px;
+          font-weight: 500;
+        }
+      }
+    }
+   
+  }

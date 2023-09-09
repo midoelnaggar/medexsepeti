@@ -17,11 +17,13 @@ const ProductsSlider = ({ title, products, productsPerView, max }: Props) => {
       <h1>{title}</h1>
       <Swiper slidesPerView={productsPerView}>
         {products.map((product, index) => {
-          return (
-            <SwiperSlide key={index}>
-              <ProductsSliderCard product={product} />
-            </SwiperSlide>
-          );
+          if (index < max) {
+            return (
+              <SwiperSlide key={index}>
+                <ProductsSliderCard product={product} />
+              </SwiperSlide>
+            );
+          }
         })}
       </Swiper>
     </div>
