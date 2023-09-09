@@ -1,0 +1,21 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .sliderSection {
+    width: 100%;
+    .slider { 
+      width: 100%;
+      .slide {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .bestSellingSection{
+    width: 80%;
+  }
+}
