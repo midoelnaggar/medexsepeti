@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Logo from "../ui/icons/Logo";
 import styles from "./Header.module.scss";
+import { menu } from "../../../custom";
 
 type Props = {
   menu: menu;
