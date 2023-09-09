@@ -21,6 +21,7 @@ type product = {
 type brand = {
     title: string;
     imgUrl: string;
+    url: string;
 };
 
 type home = {

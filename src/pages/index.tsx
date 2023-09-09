@@ -58,12 +58,47 @@ export default function Home({ menu, home }: homeProps) {
             })}
           </Swiper>
         </section>
-        <section className={styles.bestSellingSection}>
+        <section className={styles.productsSection}>
           <ProductsSlider
-            title="Best Selling"
+            title="Best selling"
             products={home.bestSelling}
             productsPerView={5}
             max={9}
+          />
+        </section>
+
+        <section className={styles.brandsSection}>
+          <h1>Popular brands</h1>
+          <Swiper className={styles.brands} slidesPerView={7.5}>
+            {home.brands.map((item, index) => {
+              if (index < 15) {
+                return (
+                  <SwiperSlide key={index} className={styles.brand}>
+                    <Link href={item.url}>
+                      <img src={item.imgUrl} alt={"brand"} />
+                      <p>{item?.title}</p>
+                    </Link>
+                  </SwiperSlide>
+                );
+              }
+            })}
+          </Swiper>
+        </section>
+
+        <section className={styles.productsSection}>
+          <ProductsSlider
+            title="The most viewed products"
+            products={home.mostViewed}
+            productsPerView={6}
+            max={15}
+          />
+        </section>
+        <section className={styles.productsSection}>
+          <ProductsSlider
+            title="Products that just arrived"
+            products={home.newArrivals}
+            productsPerView={6}
+            max={15}
           />
         </section>
       </main>

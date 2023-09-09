@@ -13,7 +13,7 @@ const ProductsSliderCard = ({ product }: Props) => {
     <div className={styles.ProductsSliderCard}>
       <div className={styles.imageContainer}>
         <div className={styles.tag}>
-          <span>{product.tag}</span>
+          { product.tag == "normal" ? null : <span>{product.tag}</span>}
         </div>
         <img
           src={product.imgUrl}

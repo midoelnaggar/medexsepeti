@@ -1,61 +1,69 @@
-
 .ProductsSliderCard {
-    width: 180px;
-    margin-block: 24px;
-    display: flex;
-    flex-direction: column;
-    .imageContainer {
-      position: relative;
-      .tag {
-        position: absolute;
-        padding: 26px;
-        z-index: 1;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        span {
-          padding: 9px 16px;
-          font-size: 15px;
-          font-weight: 500;
-          color: white;
-          background-color: var(--c1);
-          height: fit-content;
-          text-transform: uppercase;
-        }
-        button {
-          cursor: pointer;
-        }
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg6);
+  overflow: hidden;
+  .imageContainer {
+    position: relative;
+    .tag {
+      position: absolute;
+      padding: 26px;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      span {
+        padding: 6px 10px;
+        font-size: 14px;
+        font-weight: 600;
+        height: fit-content;
+        text-transform: uppercase;
+        background-color: var(--bg5);
+
       }
-  
-      img {
-        width: 180px;
-        height: 180px;
-        object-fit: cover;
+      button {
         cursor: pointer;
       }
-
     }
-    .details {
-      margin-block: 28px;
-      .title {
-        font-size: 18px;
-        text-transform: capitalize;
-        color: var(--c5);
-      }
-      .descAndPrice {
-        display: flex;
-        flex-direction: column;
 
-        margin-top: 5px;
-        * {
-          display: flex;
-          align-items: center;
-        }
-        .price {
-          font-size: 22px;
-          font-weight: 500;
-        }
-      }
+    img {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      cursor: pointer;
     }
-   
   }
+  .details {
+    margin-block: 18px 28px;
+    width: 100%;
+    padding: 10px;
+    .title {
+      font-size: 18px;
+      text-transform: capitalize;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+    .descAndPrice {
+      display: flex;
+      flex-direction: column;
+
+      margin-top: 5px;
+      * {
+        display: flex;
+        align-items: center;
+      }
+      .desc{
+        font-size: 14px;
+        text-transform: capitalize;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 100%;
+      }
+      .price {
+        font-size: 22px;
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "./ProductsSlider.module.scss";
 import { product } from "../../../custom";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,11 +14,11 @@ const ProductsSlider = ({ title, products, productsPerView, max }: Props) => {
   return (
     <div className={styles.ProductsSlider}>
       <h1>{title}</h1>
-      <Swiper slidesPerView={productsPerView}>
+      <Swiper slidesPerView={productsPerView-0.5}>
         {products.map((product, index) => {
           if (index < max) {
             return (
-              <SwiperSlide key={index}>
+              <SwiperSlide className={styles.slide} key={index}>
                 <ProductsSliderCard product={product} />
               </SwiperSlide>
             );
