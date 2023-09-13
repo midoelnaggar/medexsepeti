@@ -1,7 +1,18 @@
 .ProductsSlider {
+    max-width: 100%;
     margin-block: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     h1{
         color: var(--bg4);
+        font-weight: 600;
         margin-bottom: 20px;
+        align-self: flex-start;
+    }
+    .swiper{
+        width: 100%;
+        overflow-y: visible;
     }
 }

@@ -1,0 +1,10 @@
+.RatingStars {
+    display: flex;
+    gap: 2px;
+  svg {
+    line-height: 1.4285em;
+    height: 2em;
+    width: 16px !important;
+    overflow: visible;
+  }
+}

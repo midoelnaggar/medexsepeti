@@ -5,14 +5,14 @@ const date = now.toDate();
 type children = React.ReactNode
 
 
-type menu = { title: string; url: string }[];
+type menu = { title: string; url: string, color: string | null, images?: string[], children?: menu }[];
 
 type product = {
     title: string;
     description: string;
     price: string;
     imgUrl: string;
-    tag?: "normal" | "best selling"| "most viewed";
+    tag?: "normal" | "best selling" | "most viewed";
     dateCreated: date;
     wishlistedCount: number;
     views: number;
@@ -35,3 +35,6 @@ type home = {
     newArrivals: product[]
 }
 
+interface wishlistInitialState {
+    items: string[]
+}

@@ -44,6 +44,7 @@ export default function Home({ menu, home }: homeProps) {
             spaceBetween={0}
             slidesPerView={1}
             navigation
+            autoplay={true}
             pagination={{ clickable: true }}
             modules={[Autoplay, Navigation, Pagination]}
           >
@@ -69,7 +70,7 @@ export default function Home({ menu, home }: homeProps) {
 
         <section className={styles.brandsSection}>
           <h1>Popular brands</h1>
-          <Swiper className={styles.brands} slidesPerView={7.5}>
+          <Swiper className={styles.brands} modules={[Autoplay]} autoplay={true} loop={true} slidesPerView={7}>
             {home.brands.map((item, index) => {
               if (index < 15) {
                 return (

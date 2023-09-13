@@ -1,9 +1,10 @@
 import Header from "@/components/Header/Header";
 import styles from "./DefaultLayout.module.scss";
+import { menu } from "../../../custom";
 
 type Props = {
   children: React.ReactNode;
-  menu: { title: string; url: string }[];
+  menu: menu;
 };
 
 const DefaultLayout = ({ children,menu }: Props) => {
